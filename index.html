@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>CodePro.vn - CyberSoft.edu.vn</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--===============================================================================================-->
+		<link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+		<!--===============================================================================================-->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:ital&wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<!--===============================================================================================-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendor/bootstrap/css/bootstrap.min.css"
+		/>
+		<!--===============================================================================================-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"
+		/>
+		<!--===============================================================================================-->
+		<link
+			rel="stylesheet"
+			type="text/css"
+			href="vendor/animate/animate.css"
+		/>
+		<!--===============================================================================================-->
+
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--===============================================================================================-->
+	</head>
+	<body>
+		<div class="container-contact100">
+			<div
+				class="contact100-map"
+				id="google_map"
+				data-map-x="40.722047"
+				data-map-y="-73.986422"
+				data-pin="images/icons/map-marker.png"
+				data-scrollwhell="0"
+				data-draggable="1"
+			></div>
+
+			<div class="contact100-more">
+				<i class="zmdi zmdi-phone-in-talk"></i>
+				(+84) 961.05.10.14
+			</div>
+
+			<div class="wrap-contact100">
+				<div>
+					<img
+						src="images/cybersoft.png"
+						alt="Front End CyberSoft"
+						width="40%"
+					/>
+					<span style="padding: 20px"></span>
+					<img
+						src="images/codepro.png"
+						alt="Front End CyberSoft"
+						width="30%"
+					/>
+
+					<div style="clear: both"></div>
+					<span class="contact100-form-title"> TÍNH CƯỚC UBER </span>
+					<h2>Vui lòng chọn loại xe:</h2>
+					<ul>
+						<li class="type">
+							<input
+								id="uberX"
+								type="radio"
+								name="loaiUber"
+								value="UBER_X"
+								checked
+							/>
+							<label for="uberX">Uber X</label>
+
+							<div class="check"></div>
+						</li>
+
+						<li class="type">
+							<input
+								id="uberSUV"
+								type="radio"
+								name="loaiUber"
+								value="UBER_SUV"
+							/>
+							<label for="uberSUV">Uber SUV</label>
+							<div class="check"></div>
+						</li>
+
+						<li class="type">
+							<input
+								id="uberBlack"
+								type="radio"
+								name="loaiUber"
+								value="UBER_BLACK"
+							/>
+							<label for="uberBlack">Uber Black</label>
+							<div class="check"></div>
+						</li>
+					</ul>
+				</div>
+				<div style="clear: both"></div>
+
+				<form class="contact100-form">
+					<div
+						class="wrap-input100 validate-input"
+						data-validate="Name is required"
+					>
+						<h2>Nhập vào số KM</h2>
+						<input
+							id="soKM"
+							class="input100"
+							type="number"
+							name="name"
+							placeholder="Số KM ..."
+						/>
+						<span class="focus-input100"></span>
+					</div>
+					<div
+						class="wrap-input100 validate-input"
+						data-validate="Name is required"
+					>
+						<h2>Nhập thời gian chờ</h2>
+						<input
+							id="thoiGianCho"
+							class="input100"
+							type="number"
+							name="name"
+							placeholder="Thời gian chờ  ..."
+						/>
+						<span class="focus-input100"></span>
+					</div>
+
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button
+							type="button"
+							class="contact100-form-btn"
+							id="btnTinhTien"
+						>
+							TÍNH TIỀN
+						</button>
+					</div>
+					<div class="wrap-contact100-form-btn">
+						<div class="contact100-form-bgbtn"></div>
+						<button
+							type="button"
+							class="contact100-form-btn"
+							data-toggle="modal"
+							data-target="#billModal"
+						>
+							IN HÓA ĐƠN
+						</button>
+					</div>
+				</form>
+
+				<div style="clear: both"></div>
+				<div id="divThanhTien" class="dongia">
+					<h2>
+						Thành tiền:
+						<span id="xuatTien" class="xuatTien"> 12345</span>
+						vnd
+					</h2>
+				</div>
+			</div>
+		</div>
+
+		<!-- BILL MODAL -->
+		<div
+			class="modal fade"
+			id="billModal"
+			tabindex="-1"
+			role="dialog"
+			aria-labelledby="myLargeModalLabel"
+			aria-hidden="true"
+		>
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<!-- <div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">
+							HÓA ĐƠN
+						</h5>
+						<button
+							type="button"
+							class="close"
+							data-dismiss="modal"
+							aria-label="Close"
+						>
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div> -->
+					<div class="modal-body">
+						<div class="bill__logo text-center">
+							<img
+								src="./images/cybersoft.png"
+								alt=""
+								width="40%"
+							/>
+						</div>
+						<div class="bill__text">
+							<h3 class="text-center font-weight-bold mb-3">
+								HÓA ĐƠN UBER
+							</h3>
+							<div class="bill__info mb-3">
+								<span><strong>Họ & tên:</strong></span>
+								<span>Phạm Minh Hy</span> <br />
+								<span><strong>Loại Uber:</strong></span>
+								<span>UBER X</span> <br />
+								<span><strong>Ngày:</strong></span>
+								<span>11/01/2022</span> <br />
+								<span><strong>Liên hệ:</strong></span>
+								<span>(+84) 961.05.10.14</span> <br />
+							</div>
+						</div>
+						<div class="bill__table table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th class="text-center">NO</th>
+										<th>CÁC KHOẢN THU</th>
+										<th class="text-center">SỐ LƯỢNG</th>
+										<th class="text-center">ĐVT</th>
+										<th class="text-right">ĐƠN GIÁ</th>
+										<th class="text-right">THÀNH TIỀN</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="text-center">1</td>
+										<td>1 km đầu tiên</td>
+										<td class="text-center">0</td>
+										<td class="text-center">Km</td>
+										<td class="text-right">8000</td>
+										<td class="text-right">0</td>
+									</tr>
+									<tr>
+										<td class="text-center">2</td>
+										<td>Từ 1 km đến 20 km</td>
+										<td class="text-center">0</td>
+										<td class="text-center">Km</td>
+										<td class="text-right">12000</td>
+										<td class="text-right">0</td>
+									</tr>
+									<tr>
+										<td class="text-center">3</td>
+										<td>Từ 21 km trở đi</td>
+										<td class="text-center">0</td>
+										<td class="text-center">Km</td>
+										<td class="text-right">10000</td>
+										<td class="text-right">0</td>
+									</tr>
+									<tr>
+										<td class="text-center">4</td>
+										<td>Thời gian chờ</td>
+										<td class="text-center">0</td>
+										<td class="text-center">Phút</td>
+										<td class="text-right">2000</td>
+										<td class="text-right">0</td>
+									</tr>
+								</tbody>
+								<tfoot>
+									<tr>
+										<th colspan="5">Tổng tiền:</th>
+										<th class="text-right">0</th>
+									</tr>
+								</tfoot>
+							</table>
+						</div>
+					</div>
+					<div class="modal-footer justify-content-center">
+						<div class="bill__power text-center">
+							<strong>Thank you!</strong>
+							<p>
+								Power by
+								<a
+									href="https://cybersoft.edu.vn/"
+									target="_blank"
+									>CyberSoft.edu.vn</a
+								>
+							</p>
+						</div>
+						<!-- <button
+							type="button"
+							class="btn btn-secondary"
+							data-dismiss="modal"
+						>
+							Hủy
+						</button>
+						<button type="button" class="btn btn-primary">
+							Xuất hóa đơn
+						</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--===============================================================================================-->
+		<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/animsition/js/animsition.min.js"></script>
+		<!--===============================================================================================-->
+		<script src="vendor/bootstrap/js/popper.min.js"></script>
+		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAKFWBqlKAGCeS1rMVoaNlwyayu0e0YRes"></script>
+		<script src="js/map-custom.js"></script>
+		<!--===============================================================================================-->
+		<!-- <script src="./js/index.js"></script> -->
+		<script src="./js/general.constant.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
+</html>

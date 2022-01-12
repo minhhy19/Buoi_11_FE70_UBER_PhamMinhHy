@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Open+Sans:ital&wght@400;600;700&display=swap"
+		rel="stylesheet"
+	/>
+
+	<head>
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,300;1,600&display=swap');
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body {
+				font-size: 12px;
+				font-family: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana,
+					sans-serif;
+			}
+
+			img,
+			svg {
+				vertical-align: middle;
+			}
+
+			p {
+				margin-top: 0;
+				margin-bottom: 1rem;
+				line-height: 2;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6 {
+				margin-top: 0;
+				margin-bottom: 0.5rem;
+				font-weight: 500;
+				line-height: 1.2;
+			}
+
+			h1,
+			h2,
+			h3 {
+				color: #41ad49;
+			}
+
+			h1 {
+				font-size: 28px;
+				font-weight: bold;
+			}
+
+			h2 {
+				font-size: 16px;
+				font-weight: 700;
+			}
+
+			h3 {
+				font-size: 10px;
+				font-style: italic;
+				font-weight: 600;
+			}
+
+			strong {
+				font-weight: 700 !important;
+			}
+
+			.container {
+				max-width: 1320px;
+				width: 100%;
+				padding-right: var(--bs-gutter-x, 0.75rem);
+				padding-left: var(--bs-gutter-x, 0.75rem);
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.row > * {
+				flex-shrink: 0;
+				width: 100%;
+				max-width: 100%;
+				padding-right: calc(var(--bs-gutter-x) * 0.5);
+				padding-left: calc(var(--bs-gutter-x) * 0.5);
+				margin-top: var(--bs-gutter-y);
+			}
+
+			.col-6 {
+				flex: 0 0 auto;
+				width: 50%;
+			}
+
+			.text-strong {
+				font-weight: 700;
+				font-size: 11px;
+			}
+
+			.letter-spacing {
+				letter-spacing: -0.3px;
+			}
+
+			.text-gray {
+				color: #636363;
+			}
+
+			.text-black {
+				color: black;
+			}
+
+			.text-center {
+				text-align: center !important;
+			}
+
+			.p-4 {
+				padding: 1.5rem !important;
+			}
+
+			.mt-5 {
+				margin-top: 3rem !important;
+			}
+
+			.col-4 {
+				flex: 0 0 auto;
+				width: 33.33333333%;
+			}
+
+			.col-12 {
+				flex: 0 0 auto;
+				width: 100%;
+			}
+
+			.p-4 {
+				padding: 1.5rem !important;
+			}
+
+			.img-fluid {
+				max-width: 100%;
+				height: auto;
+			}
+
+			.p-4 {
+				padding: 1.5rem !important;
+			}
+
+			.justify-content-between {
+				justify-content: space-between !important;
+			}
+
+			.col-6 {
+				flex: 0 0 auto;
+				width: 50%;
+			}
+
+			.align-self-center {
+				align-self: center !important;
+			}
+
+			table {
+				display: table;
+				border-collapse: separate;
+				box-sizing: border-box;
+				text-indent: initial;
+				border-spacing: 2px;
+				border-color: grey;
+			}
+
+			table > :not(:first-child) {
+				border-top: none !important;
+			}
+
+			table thead tr th {
+				border-top: 1px solid #41ad49;
+				border-bottom: 1px solid #41ad49 !important;
+				font-size: 12px;
+				font-weight: 600;
+				color: #000000;
+			}
+
+			table.table tfoot tr th {
+				border: none !important;
+				background-color: #c7dfbf !important;
+			}
+
+			table tr {
+				line-height: 36px;
+			}
+
+			.table {
+				width: 100%;
+			}
+
+			a {
+				color: #007fd3;
+				text-decoration: none;
+			}
+
+			thead {
+				display: table-header-group;
+				vertical-align: middle;
+				border-color: inherit;
+			}
+
+			.header {
+				display: inline;
+			}
+
+			.header-contact {
+				float: right;
+				display: inline;
+				vertical-align: middle;
+			}
+
+			.header-contact-text {
+				font-size: 10px;
+				line-height: 1.7;
+			}
+
+			.profile > div > p :not(strong) {
+				font-size: 6px;
+			}
+
+			table tbody tr:nth-child(even) {
+				background-color: #f1f1f2;
+			}
+
+			table tbody tr td {
+				font-size: 12px;
+				color: #000000;
+			}
+
+			.text-right {
+				text-align: right;
+			}
+
+			.text-left {
+				text-align: left;
+			}
+
+			.guide {
+				font-size: 12px;
+			}
+
+			.note {
+				font-size: 9px;
+			}
+
+			.ps-3 {
+				padding-left: 1rem !important;
+			}
+		</style>
+	</head>
+
+	<body class="justify-content-between">
+		<div class="container">
+			<div class="row mt-0 justify-content-between">
+				<div class="col-4" style="display: inline-block">
+					<img
+						src="https://sbx-static.payme.vn/2021/10/22/T315ILtPB.png"
+						alt=""
+						class="img-fluid"
+					/>
+				</div>
+				<div class="col-6 text-gray header-contact">
+					<p class="header-contact-text">
+						<strong> A</strong>: 119 Phan Huy Ích, P. 15, Q. Tân
+						Bình, TP.HCM <br />
+						<strong> T</strong>: 028 7300 6462 - 1900 6462 <br />
+						<strong> www.pathway.edu.vn</strong>
+					</p>
+				</div>
+				<div class="col-12">
+					<h1
+						class="text-center p-4"
+						style="margin: 30px 0px 20px 0px"
+					>
+						THÔNG BÁO HỌC PHÍ
+					</h1>
+				</div>
+			</div>
+			<div class="row"></div>
+			<div class="row profile">
+				<div class="col-6" style="float: left; display: inline">
+					<p>
+						<strong> Họ & tên:</strong>
+						<%= data.studentInfo.fullName %> <br />
+						<strong> Lớp:</strong>
+						<%= data.studentInfo.className %> <br />
+						<strong> Năm học:</strong>
+						<%= data.studentInfo.schoolYear %> <br />
+						<strong> Email liên hệ:</strong>
+						<%= data.studentInfo.email %>
+					</p>
+				</div>
+				<div class="col-6 mr-2" style="display: inline">
+					<p>
+						<strong> Mã số:</strong>
+						<%= data.studentInfo.studentId %> <br />
+						<strong> Cơ sở:</strong>
+						<%= data.studentInfo.schoolBranch %> <br />
+						<strong> Hạn nộp:</strong>
+						<%= data.studentInfo.submissionDeadline %> <br />
+						<strong> Số điện thoại:</strong>
+						<%= data.studentInfo.phoneNumber %>
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12">
+					<table
+						class="table table-striped"
+						style="margin-bottom: 2rem"
+					>
+						<thead>
+							<tr>
+								<th class="text-center">STT</th>
+								<th>CÁC KHOẢN THU</th>
+								<th class="text-right">ĐƠN GIÁ</th>
+								<th class="text-center">SỐ LƯỢNG</th>
+								<th class="text-center">ĐVT</th>
+								<th class="text-right">THÀNH TIỀN</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% data.tuition.items.forEach(function(tuition,
+							index){ %>
+							<tr>
+								<td class="text-center"><%= index + 1 %></td>
+								<td><%= tuition.title %></td>
+								<td class="text-right">
+									<%=
+									data.helpers.formatCurrency(tuition.price)
+									%>
+								</td>
+								<td class="text-center">
+									<%= tuition.quantity %> <%
+									if(tuition.type=='percentage' ){ %>
+									<span>%</span>
+									<% } %>
+								</td>
+								<td class="text-center"><%= tuition.unit %></td>
+								<td class="text-right">
+									<%=
+									data.helpers.formatCurrency(tuition.paymentAmount)
+									%>
+								</td>
+							</tr>
+							<% }); %>
+						</tbody>
+						<tfoot>
+							<tr>
+								<th></th>
+								<th colspan="4">TỔNG TIỀN</th>
+								<th class="text-right">
+									<%=
+									data.helpers.formatCurrency(data.tuition.total)
+									%>
+								</th>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+			<div class="row guide">
+				<div class="col-12" style="margin-top: 20px">
+					<h2>HƯỚNG DẪN THANH TOÁN</h2>
+					<p class="text-gray">
+						Hình thức thanh toán: phụ huynh có thể thanh toán trực
+						tiếp từ link sau:<br />
+						<span class="ps-3">
+							<a href="<%= data.paymentLink %>">
+								<%= data.paymentLink %>
+							</a>
+						</span>
+						<!-- <strong> 1.</strong> Hình thức thanh toán: phụ huynh có thể thanh toán trực tiếp từ
+          link sau:<br />
+          <span class="ps-3">
+            <a href="<%= data.paymentLink %>">
+              <%= data.paymentLink %>
+            </a>
+          </span>
+          <br />
+          <strong> 2.</strong> Hoặc chuyển khoản theo thông tin bên dưới:
+        </p>
+        <p class="text-strong ps-3 letter-spacing">
+          Thông tin chuyển khoản: CTY CP GIÁO DỤC LIÊN MINH BÁCH KHOA <br />
+          1/ SỐ TK: 1351 0000 992 905 - Ngân hàng TMCP Đầu tư và Phát Triển Việt Nam (BIDV) - CN
+          Gia Định <br />
+          3/ SỐ TK: 114 000 123 348 - Ngân hàng TMCP Công Thương Việt Nam (Vietinbank) - CN 10
+          <br />
+          2/ SỐ TK: 0600 8549 9060 - Ngân Hàng TMCP Thương Tín (Sacombank) - PGD Lữ Gia <br />
+          4/ SỐ TK: 171 166 299 - Ngân Hàng TMCP Á Châu (ACB) - CN Lý Thường Kiệt
+        </p>
+
+        <p class="text-gray">
+          Quý phụ huynh chuyển khoản vui lòng ghi theo cấu trúc sau: <br />
+          <strong class="text-black">"Q2_PBV_ Tên HS _ Lớp_Nội dung"</strong> để Nhà Trường cập
+          nhật đúng thông tin.
+        </p> -->
+					</p>
+				</div>
+			</div>
+
+			<div class="row" style="margin-top: 5rem">
+				<div class="col-12">
+					<h3><i>*** QUÝ PHỤ HUYNH LƯU Ý:</i></h3>
+					<p class="text-gray note">
+						Thông báo thu phí này được in tự động từ hệ thống nên
+						không có dấu mộc và chữ ký. <br />
+						Mọi thắc mắc liên quan đến các khoản phí, Phụ huynh vui
+						lòng liên hệ với Bộ Phận Tuyển Sinh: <br />
+						<strong>
+							Điện thoại: 028 7300 6462 - 1900 6462 (ext:706) |
+							Hotline 0899 509 782 | Email:
+							ketoancum12@pathway.edu.vn</strong
+						>
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
