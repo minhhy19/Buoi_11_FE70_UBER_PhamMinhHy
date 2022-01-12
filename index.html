@@ -107,7 +107,7 @@
 				</div>
 				<div style="clear: both"></div>
 
-				<form class="contact100-form">
+				<form class="contact100-form" id="form-uber">
 					<div
 						class="wrap-input100 validate-input"
 						data-validate="Name is required"
@@ -117,10 +117,12 @@
 							id="soKM"
 							class="input100"
 							type="number"
-							name="name"
+							name="soKM"
 							placeholder="Số KM ..."
+							rules="required"
 						/>
 						<span class="focus-input100"></span>
+						<span class="form-message"></span>
 					</div>
 					<div
 						class="wrap-input100 validate-input"
@@ -131,16 +133,18 @@
 							id="thoiGianCho"
 							class="input100"
 							type="number"
-							name="name"
+							name="thoiGianCho"
 							placeholder="Thời gian chờ  ..."
+							rules="required"
 						/>
 						<span class="focus-input100"></span>
+						<span class="form-message"></span>
 					</div>
 
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>
 						<button
-							type="button"
+							type="submit"
 							class="contact100-form-btn"
 							id="btnTinhTien"
 						>
@@ -150,10 +154,9 @@
 					<div class="wrap-contact100-form-btn">
 						<div class="contact100-form-bgbtn"></div>
 						<button
-							type="button"
+							type="submit"
 							class="contact100-form-btn"
-							data-toggle="modal"
-							data-target="#billModal"
+							id="btnPopup"
 						>
 							IN HÓA ĐƠN
 						</button>
@@ -211,9 +214,9 @@
 								<span><strong>Họ & tên:</strong></span>
 								<span>Phạm Minh Hy</span> <br />
 								<span><strong>Loại Uber:</strong></span>
-								<span>UBER X</span> <br />
+								<span id="billLoaiUber">UBER X</span> <br />
 								<span><strong>Ngày:</strong></span>
-								<span>11/01/2022</span> <br />
+								<span id="billDate">11/01/2022</span> <br />
 								<span><strong>Liên hệ:</strong></span>
 								<span>(+84) 961.05.10.14</span> <br />
 							</div>
@@ -234,40 +237,84 @@
 									<tr>
 										<td class="text-center">1</td>
 										<td>1 km đầu tiên</td>
-										<td class="text-center">0</td>
+										<td class="text-center" id="soLuongKm1">
+											0
+										</td>
 										<td class="text-center">Km</td>
-										<td class="text-right">8000</td>
-										<td class="text-right">0</td>
+										<td class="text-right" id="donGiaKm1">
+											8000
+										</td>
+										<td
+											class="text-right"
+											id="thanhTienKm1"
+										>
+											0
+										</td>
 									</tr>
 									<tr>
 										<td class="text-center">2</td>
 										<td>Từ 1 km đến 20 km</td>
-										<td class="text-center">0</td>
+										<td
+											class="text-center"
+											id="soLuongKm1Den20"
+										>
+											0
+										</td>
 										<td class="text-center">Km</td>
-										<td class="text-right">12000</td>
-										<td class="text-right">0</td>
+										<td
+											class="text-right"
+											id="donGiaKm1Den20"
+										>
+											12000
+										</td>
+										<td
+											class="text-right"
+											id="thanhTienKm1Den20"
+										>
+											0
+										</td>
 									</tr>
 									<tr>
 										<td class="text-center">3</td>
 										<td>Từ 21 km trở đi</td>
-										<td class="text-center">0</td>
+										<td
+											class="text-center"
+											id="soLuongKm21"
+										>
+											0
+										</td>
 										<td class="text-center">Km</td>
-										<td class="text-right">10000</td>
-										<td class="text-right">0</td>
+										<td class="text-right" id="donGiaKm21">
+											10000
+										</td>
+										<td
+											class="text-right"
+											id="thanhTienKm21"
+										>
+											0
+										</td>
 									</tr>
 									<tr>
 										<td class="text-center">4</td>
 										<td>Thời gian chờ</td>
-										<td class="text-center">0</td>
+										<td class="text-center" id="soPhutCho">
+											0
+										</td>
 										<td class="text-center">Phút</td>
-										<td class="text-right">2000</td>
-										<td class="text-right">0</td>
+										<td class="text-right" id="donGiaTG">
+											2000
+										</td>
+										<td class="text-right" id="thanhTienTG">
+											0
+										</td>
 									</tr>
 								</tbody>
 								<tfoot>
 									<tr>
 										<th colspan="5">Tổng tiền:</th>
-										<th class="text-right">0</th>
+										<th class="text-right" id="tongTien">
+											0
+										</th>
 									</tr>
 								</tfoot>
 							</table>
@@ -312,6 +359,7 @@
 		<script src="js/map-custom.js"></script>
 		<!--===============================================================================================-->
 		<!-- <script src="./js/index.js"></script> -->
+		<script src="./js/validator.js"></script>
 		<script src="./js/general.constant.js"></script>
 		<script src="./js/main.js"></script>
 	</body>

@@ -563,3 +563,15 @@ input[type='radio']:checked ~ label {
 #billModal .bill__power a {
 	font-weight: bold;
 }
+
+/* Form Validate */
+.validate-input.invalid .form-control {
+	border-color: #d92550;
+}
+
+.validate-input.invalid .form-message {
+	width: 100%;
+	margin-top: 0.25rem;
+	font-size: 80%;
+	color: #d92550;
+}
