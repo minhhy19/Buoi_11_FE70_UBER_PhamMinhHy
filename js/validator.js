@@ -34,6 +34,9 @@ function Validator(formSelector) {
 	 */
 
 	var validatorRules = {
+		positivenumbers: function (value) {
+			return parseInt(value) >= 0 ? undefined : 'Trường này phải lớn hơn hoặc bằng 0';
+		},
 		required: function (value) {
 			return value ? undefined : 'Vui lòng nhập trường này';
 		},
@@ -216,7 +219,7 @@ function Validator(formSelector) {
 				handleClearErrorSubmit(formElement);
 
 				//Gọi lại onSubmit và trả về kèm giá trị của form
-				_this.onSubmit(formValues);
+				_this.onSubmit(formValues, event);
 			} else {
 				formElement.submit();
 			}

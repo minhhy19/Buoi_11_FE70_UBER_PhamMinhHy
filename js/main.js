@@ -1,12 +1,4 @@
-let isValid = false;
 let formUber = new Validator('#form-uber');
-
-formUber.onSubmit = function (formData) {
-	if (formData) {
-		isValid = true;
-		console.log(formData);
-	}
-};
 
 function xuLyTinhTien(loaiUber, soKM, thoiGianCho) {
 	let cuocPhi = {
@@ -74,9 +66,10 @@ function xuLyTinhTien(loaiUber, soKM, thoiGianCho) {
 	return cuocPhi;
 }
 
-function tinhTien() {
-	let soKM = parseFloat(document.getElementById('soKM').value);
-	let thoiGianCho = parseFloat(document.getElementById('thoiGianCho').value);
+function tinhTien(formData) {
+	let soKM = formData.soKM;
+	let thoiGianCho = formData.thoiGianCho;
+
 	let divThanhTien = document.getElementById('divThanhTien');
 	let xuatTien = document.getElementById('xuatTien');
 
@@ -90,9 +83,9 @@ function tinhTien() {
 	divThanhTien.style.display = 'block';
 }
 
-function popup() {
-	let soKM = parseFloat(document.getElementById('soKM').value);
-	let thoiGianCho = parseFloat(document.getElementById('thoiGianCho').value);
+function popup(formData) {
+	let soKM = formData.soKM;
+	let thoiGianCho = formData.thoiGianCho;
 
 	let loaiUber = document.querySelector(
 		'input[name="loaiUber"]:checked'
@@ -144,5 +137,18 @@ function popup() {
 	$('#billModal').modal();
 }
 
-document.getElementById('btnTinhTien').onclick = tinhTien;
-document.getElementById('btnPopup').onclick = popup;
+// document.getElementById('btnTinhTien').onclick = tinhTien;
+// document.getElementById('btnPopup').onclick = popup;
+formUber.onSubmit = function (formData, event) {
+	if (formData) {
+		// console.log(formData);
+		// console.log(event.submitter.id);
+		switch(event.submitter.id) {
+			case 'btnTinhTien': tinhTien(formData)
+			break;
+			case 'btnPopup': popup(formData)
+			break;
+			default: break;
+		}
+	}
+};

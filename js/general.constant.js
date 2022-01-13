@@ -1,27 +1,3 @@
-// const UBER_X = {
-// 	NAME: 'UBER X',
-// 	KM_DAU_TIEN: 8000,
-// 	KM_1_DEN_20: 12000,
-// 	KM_21: 10000,
-// 	THOI_GIAN_CHO: 2000
-// };
-
-// const UBER_SUV = {
-// 	NAME: 'UBER SUV',
-// 	KM_DAU_TIEN: 9000,
-// 	KM_1_DEN_20: 14000,
-// 	KM_21: 12000,
-// 	THOI_GIAN_CHO: 3000
-// };
-
-// const UBER_BLACK = {
-// 	NAME: 'UBER BLACK',
-// 	KM_DAU_TIEN: 10000,
-// 	KM_1_DEN_20: 16000,
-// 	KM_21: 14000,
-// 	THOI_GIAN_CHO: 4000
-// };
-
 const LOAI_UBER = {
 	UBER_X: {
 		NAME: 'UBER X',
