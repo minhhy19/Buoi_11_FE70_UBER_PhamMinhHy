@@ -137,18 +137,17 @@ function popup(formData) {
 	$('#billModal').modal();
 }
 
-// document.getElementById('btnTinhTien').onclick = tinhTien;
-// document.getElementById('btnPopup').onclick = popup;
 formUber.onSubmit = function (formData, event) {
 	if (formData) {
-		// console.log(formData);
-		// console.log(event.submitter.id);
-		switch(event.submitter.id) {
-			case 'btnTinhTien': tinhTien(formData)
-			break;
-			case 'btnPopup': popup(formData)
-			break;
-			default: break;
+		switch (event.submitter.id) {
+			case 'btnTinhTien':
+				tinhTien(formData);
+				break;
+			case 'btnPopup':
+				popup(formData);
+				break;
+			default:
+				break;
 		}
 	}
 };
